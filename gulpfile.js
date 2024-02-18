@@ -22,7 +22,7 @@ function html() {
 
 function css() {
   return gulp
-    .src('src/blocks/**/*.css')
+    .src('src/**/*.css')
     .pipe(plumber())
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest('dist/'))
@@ -42,7 +42,7 @@ function clean() {
 
 function watchFiles() {
   gulp.watch(['src/**/*.html'], html);
-  gulp.watch(['src/blocks/**/*.css'], css);
+  gulp.watch(['src/**/*.css'], css);
   gulp.watch(['src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
 }
 
