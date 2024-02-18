@@ -24,7 +24,7 @@ function css() {
   return gulp
     .src('src/**/*.css')
     .pipe(plumber())
-    .pipe(concat('bundle.css'))
+    .pipe(concat('style.css'))
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.reload({ stream: true }));
 }
